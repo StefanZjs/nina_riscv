@@ -1,7 +1,7 @@
 # nina_riscv
->最近在学西班牙语，nina在西班牙语里是女孩的意思，当然也有nino(男孩)，不过nino_riscv写的有点乱，所有就不发出来了
+>最近在学西班牙语，nina在西班牙语里是女孩的意思，当然也有nino(男孩)，nino_riscv是5级流水线，但写的有点乱，所有就不发出来了
 
-nina_riscv使用SpinalHDL进行设计，共耗时4天完成（1 day coding,3 days verify）
+>nina_riscv使用SpinalHDL进行设计，共耗时4天完成（1 day coding,3 days verify）
 ## feature
 * pipeline : 3 (fd -> ex -> mem)
 * ISA : RISCV-[I] (no CSRs,no FENCE, no ECALL/EBREAK)

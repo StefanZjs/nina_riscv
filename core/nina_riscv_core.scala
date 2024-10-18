@@ -1,6 +1,7 @@
 package nina_riscv.core
 
 import nina_riscv.bus.{bus_cfg, nina_dBUS, nina_iBUS}
+import nina_riscv.decode.Utils.get_LOAD_index
 import nina_riscv.ex.ex_stage
 import nina_riscv.fd.fd_stage
 import nina_riscv.mem.mem_stage
@@ -119,7 +120,7 @@ case class axi_nina_riscv() extends Component{
 
   val ram = Axi4SharedOnChipRam(
     dataWidth = 32,
-    byteCount = 64 kB,
+    byteCount = 128 kB,
     idWidth = 4,
     arwStage = false
   )
@@ -128,7 +129,7 @@ case class axi_nina_riscv() extends Component{
 val axiCrossbar = Axi4CrossbarFactory()
 
   axiCrossbar.addSlaves(
-    ram.io.axi -> (0x80000000L, 64 kB),
+    ram.io.axi -> (0x80000000L, 128 kB),
     apbBridge.io.axi -> (0xF0000000L, 256 MB)
   )
   axiCrossbar.addConnections(

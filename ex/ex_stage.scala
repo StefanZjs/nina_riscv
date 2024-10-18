@@ -3,7 +3,7 @@ package nina_riscv.ex
 import nina_riscv.fd.{fd2x_bus, fd_jump}
 import nina_riscv.regfiles.regfiles_rd_rsp
 import nina_riscv.decode.Utils._
-import nino_riscv.nina_riscv.fd._
+import nina_riscv.fd._
 import spinal.core.{Mux, _}
 import spinal.lib._
 
