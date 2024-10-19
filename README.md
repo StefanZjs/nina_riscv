@@ -23,9 +23,18 @@ nina_riscv参照Briey SoC设计RAM与UART,其他外设也可以参考其进行�
 1. instruction_map中添加指令，instruction_map += (B"7'B0110011" -> Map("OPCODE_MULT" -> OP_GEN(instruction).alu_r))
 2. ex_stage中新建一个Area实现乘法功能
 
+## TODO
+* debug module
+* branch predict
+* i/d cache
+* interrupt
+* 
+
+
 # 参考资料
 * Vexriscv : https://github.com/SpinalHDL/VexRiscv
 
-> ***注意：纯自学，没有从业经验，所以验证的覆盖率可能不全。***
+
+> ***注意：纯学习用，没有从业经验，所以验证的覆盖率可能不全，欢迎大家学习交流。***
 
 > Email：stefan_zjs@163.com
